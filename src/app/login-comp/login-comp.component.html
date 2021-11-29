@@ -1,0 +1,14 @@
+<div class="container-fluid">
+    <h2>Login Page</h2>
+    <form class="formClass" (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <label for="userName" class="formLabel">Enter Your Email</label>
+        <input type="email" class="form-control formInput" name="userName" placeholder="Enter Email!" value="Harry@example.com" ngModel required>
+        <label for="pWord" class="formLabel">Enter Your Password</label>
+        <input type="password" class="form-control formInput" name="pWord" placeholder="Enter Password!" value="12345678" ngModel required minlength=8 maxlength=32>
+        <label class="formLabel centeredClass"><input class="formCheck" type="checkbox" name="signUp" ngModel/>&nbsp;&nbsp;Sign Up?</label>
+        <input type="submit" class="loginButton" title="Enter login credentials" [disabled]="!f.valid" value="Login">
+    </form>
+    <hr/>
+    <button type="button" class="loginButton" (click)="loginWithTest()">Login with Test!</button>
+</div>
+<hr>

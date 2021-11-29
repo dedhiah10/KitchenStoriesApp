@@ -1,0 +1,55 @@
+h2 {
+    text-align: center;
+    padding-bottom: 35px;
+}
+
+.formLabel {
+    font-size: 20px;
+    text-indent: 10px;
+}
+
+.loginButton {
+    display: block;
+    margin: 23px auto;
+    font-size: 24px;
+    width: 100%;
+    padding: 5px;
+    background-color: lawngreen;
+    color: black;
+    font-weight: 700;
+    border: 2px solid darkgreen;
+    border-radius: 7px;
+}
+
+.loginButton:disabled {
+    background-color: palegreen;
+    color: slategrey;
+    border: 2px solid black;
+    cursor: not-allowed;
+}
+
+.formClass {
+    width: 50%;
+    margin: auto;
+}
+
+.formInput {
+    margin-bottom: 20px;
+    background-color: gainsboro;
+}
+
+.formInput:active,
+.formInput:focus {
+    border: 2px solid lawngreen;
+}
+
+.formCheck {
+    height: 16px;
+    width: 16px;
+}
+
+.centeredClass {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}

@@ -1,0 +1,22 @@
+<div class="container-fluid"><br/><br/>
+    <a href="" class="redLogOut">Logout!</a>
+    <div class="searchGrid"><input type="text" [(ngModel)]="searchParam" class="searchInput" /><button class="funcBtns searchBtn" (click)="searchProds()">Search</button></div>
+    <br/>
+    <hr/><br/>
+    <div class="container-fluid" *ngFor="let x of searchedProducts">
+        <div class="productItem">
+            <img class="productImg" src="{{x.url}}">
+            <div class="productInfo">
+                <h2 style="text-align: center;">{{x.productName}}<span style="color: lawngreen; float: right; padding: 3px;">{{x.productPrice}}$</span></h2>
+                <p>{{x.productDescription}}</p>
+                <!-- <input type="number" value="0" [id]="x.productName" /> -->
+                <div class="buttonsDiv">
+                    <button class="funcBtns" (click)="addToCart(x.pID)">Add to Cart</button>
+                    <button class="funcBtns" (click)="buyItem(x.pID)">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <hr/><br/>
+    </div>
+</div>

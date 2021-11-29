@@ -1,0 +1,48 @@
+<div class="container-fluid">
+    <div style="width: 100%; height: 20px;"></div>
+    <div class="userDetails">Your Email: <u>{{ email }}</u></div><br/>
+    <a href="" class="redLogOut">Logout!</a>
+    <div class="userDetails"><button (click)="toggleCartTrans()" class="funcBtns toggleBtn">{{buttonMessage}}</button></div><br/>
+    <hr/><br/>
+    <div *ngIf="!buttonBool">
+        <div *ngIf="userData.cart.length < 1">
+            <h2 style="text-align: center;">No Data to show yet!</h2>
+        </div>
+        <div *ngFor="let x of userData.cart">
+            <div class="productItem">
+                <img class="productImg" src="{{x.url}}">
+                <div class="productInfo">
+                    <h2 style="text-align: center;">{{x.productName}}<span style="color: lawngreen; float: right; padding: 3px;">{{x.productPrice}}$</span></h2>
+                    <p>{{x.productDescription}}</p>
+                    <p>Quantity: {{x.productQuantity}}</p>
+                    <div class="buttonsDiv">
+                        <button class="funcBtns" (click)="removeFromCart(x.pID)">remove</button>
+                        <button class="funcBtns" (click)="buyFromCart(x.pID)">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <br/>
+            <hr/><br/>
+        </div>
+        <div class="userDetails" *ngIf="userData.cart.length > 0">{{cartPrice}}$</div>
+        <div class="userDetails" *ngIf="userData.cart.length > 0"><button (click)="checkoutCart()" class="funcBtns toggleBtn">Checkout Cart!</button></div>
+    </div>
+    <div *ngIf="buttonBool">
+        <div *ngIf="userData.transaction.length < 1">
+            <h2 style="text-align: center;">No Data to show yet!</h2>
+        </div>
+        <div *ngFor="let x of userData.transaction">
+            <h2>Time of Purchase: {{x.buyTime}}</h2>
+            <div class="productItem">
+                <img class="productImg" src="{{x.url}}">
+                <div class="productInfo">
+                    <h2 style="text-align: center;">{{x.productName}}<span style="color: lawngreen; float: right; padding: 3px;">{{x.productPrice}}$</span></h2>
+                    <p>{{x.productDescription}}</p>
+                    <p>Quantity: {{x.productQuantity}}</p>
+                </div>
+            </div>
+            <br/>
+            <hr/><br/>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,62 @@
+.productImg {
+    display: block;
+    float: left;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 1px solid white;
+}
+
+.productInfo {
+    margin-left: 25px;
+    width: 100%;
+}
+
+.buttonsDiv {
+    margin: auto;
+    width: 60%;
+    justify-content: space-around;
+    display: flex;
+}
+
+.productItem {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+.funcBtns {
+    font-size: 20px;
+    color: white;
+    background-color: navy;
+    border: 2px solid white;
+    width: 33%;
+    padding: 8px 0px;
+}
+
+.searchInput {
+    margin: auto;
+    width: 90%;
+    color: black;
+    border: 2px solid transparent;
+    font-size: 24px;
+    padding: 5px;
+}
+
+.searchInput:active,
+.searchInput:focus {
+    border: 2px solid lawngreen;
+}
+
+.searchBtn {
+    font-size: 20px;
+    padding: 3px;
+    width: 80%;
+}
+
+.searchGrid {
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}

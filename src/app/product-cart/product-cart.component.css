@@ -1,0 +1,45 @@
+.productImg {
+    display: block;
+    float: left;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 1px solid white;
+}
+
+.productInfo {
+    margin-left: 25px;
+    width: 100%;
+}
+
+.buttonsDiv {
+    margin: auto;
+    width: 60%;
+    justify-content: space-around;
+    display: flex;
+}
+
+.productItem {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+.funcBtns {
+    font-size: 20px;
+    border-radius: 10px;
+    color: white;
+    background-color: navy;
+    border: 2px solid white;
+    width: 33%;
+    padding: 8px 0px;
+}
+
+.toggleBtn {
+    width: 50%;
+}
+
+.userDetails {
+    text-align: center;
+    font-size: 28px;
+}
